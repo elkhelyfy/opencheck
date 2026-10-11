@@ -14,7 +14,8 @@ trait RedirectsToCurrentTeam
 
         URL::defaults(['current_team' => $team->slug]);
 
-        return "/{$team->slug}{$redirect}";
+        // return "/{$team->slug}{$redirect}";
+        return "/dashboard";
     }
 
     protected function currentTeam(Request $request): Team
